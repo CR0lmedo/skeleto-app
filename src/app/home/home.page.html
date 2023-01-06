@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="medium">
+    <ion-title>
+      SkeletonAPP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="text-align: center;">
+  <h1>Bienvenido!</h1>
+  <ion-item>
+    <ion-label style="text-align:left">Usuario: {{usuario}}</ion-label>
+  </ion-item>
+  <h2>Informacion adicional</h2>
+
+  <div>
+    <form >
+
+      <ion-item>
+        <ion-label>Nombre</ion-label>
+        <ion-input placeholder="Ingrese su nombre" style="text-align: right;" 
+          (change)="obtenerNom($event)"></ion-input>
+        <!--Evento Nombre  -->
+      </ion-item>
+      <ion-item>
+        <ion-label>Apellido</ion-label>
+        <ion-input placeholder="Ingrese su apellido" style="text-align: right;" 
+          (change)="obtenerApe($event)"></ion-input>
+        <!--Evento apellido  -->
+      </ion-item>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Nivel Educacion</ion-label>
+          <ion-select placeholder="Seleccione" style="text-align: right;">
+            <ion-select-option value="basica">Basica</ion-select-option>
+            <ion-select-option value="media">Media</ion-select-option>
+            <ion-select-option value="superior">Superior</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-item>
+
+        <label for="F">Fecha de nacimiento:</label>
+
+        <input type="date" id="F" name="trip-start" style="text-align: right;">
+      </ion-item>
+      <br>
+
+      <ion-button fill="outline" color="dark" type="reset">Limpiar</ion-button>
+      <ion-button slot="end" size="medium" fill="outline" color="dark" (click)="Alerta()">mostrar</ion-button>
+    </form>
+  </div>
+</ion-content>
+
+
+
+<ion-toolbar color="medium">
+  <h6>
+    App desarrollada por Cristhoper O.
+  </h6>
+</ion-toolbar>

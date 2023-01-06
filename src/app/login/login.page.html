@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header style="text-align: center;">
+      <ion-card-title>Skeleton app </ion-card-title>
+      <ion-card-subtitle>aqui comienza todo</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-card-title style="text-align: center;">bienvenido!</ion-card-title>
+      <!-----------------------datos de iniciar sesion  ---------->
+      <ion-item>
+        <ion-label>Usuario: </ion-label>
+        <ion-input placeholder=" " minlength="3" maxlength="8" (change)="nombrePerson($event)"></ion-input>  
+      </ion-item>                                                        <!--evento nombre de usuario pal ts--->
+
+      <ion-item>
+        <ion-label>pasworsd: </ion-label>
+        <ion-input placeholder="'****'" type="password" maxlength="8" minlength="4" requiered></ion-input>
+      </ion-item>
+      <!-------- botones , el boton ingresar con parametro query --------------------->
+
+    </ion-card-content>
+    <div style="text-align: center;">
+      <ion-button color="dark" expand="block" fill="outline" [routerLink]="['/home']"
+        [queryParams]="[user]">ingresar</ion-button>
+
+      <ion-button fill="clear">Crea tu cuenta aqui</ion-button>
+    </div>
+    <!----------------------------  -------------------------------------------------->
+
+  </ion-card>
+</ion-content>
